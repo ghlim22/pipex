@@ -23,5 +23,10 @@ int main(int argc, char *argv[], char *envp[])
 
 	for (int i = 0; envp[i]; ++i)
 		printf("%s\n", envp[i]);
+	
+	int w = 7;
+
+	int x = *(int *) & w;
+	printf("%d", x);
 	return (0);
 }
