@@ -6,7 +6,7 @@
 #    By: gylim <gylim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 11:33:42 by gylim             #+#    #+#              #
-#    Updated: 2023/03/01 17:55:48 by gylim            ###   ########.fr        #
+#    Updated: 2023/03/05 19:25:51 by gylim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ else
 	OBJS = $(OBJS_MAND)
 endif
 
-#INC_DIR = includes
+#INC_DIR = include
 #INC_FILES_MAND = libft.h
 #ifdef BONUS_FLAG
 #	INC = $(addprefix $(INC_DIR)/, $(INC_FILES_BONUS))
