@@ -6,7 +6,7 @@
 #    By: gylim <gylim@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 11:33:42 by gylim             #+#    #+#              #
-#    Updated: 2023/03/05 19:25:51 by gylim            ###   ########.fr        #
+#    Updated: 2023/03/12 21:00:30 by gylim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ else
 	OBJS = $(OBJS_MAND)
 endif
 
-#INC_DIR = include
+INC_DIR = include
 #INC_FILES_MAND = libft.h
 #ifdef BONUS_FLAG
 #	INC = $(addprefix $(INC_DIR)/, $(INC_FILES_BONUS))
@@ -52,7 +52,7 @@ bonus:
 	make BONUS_FLAG=1 all
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -I $(INC_DIR) -o $@ $<
 
 $(OBJS): | $(OBJ_DIR)
 
@@ -61,7 +61,7 @@ $(OBJ_DIR):
 
 $(NAME): $(OBJS)
 	make -C $(LIB_DIR) all
-	$(CC) $(CFLAGS) -L $(LIB_DIR) $(LIBS) -o $@ $^
+	$(CC) $(CFLAGS) -L $(LIB_DIR) $(LIBS) -I $(INC_DIR) -o $@ $^
 
 clean:
 	make -C $(LIB_DIR) clean

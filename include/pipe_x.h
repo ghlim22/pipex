@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   pipe_x.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gylim <gylim@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 20:16:20 by gylim             #+#    #+#             */
-/*   Updated: 2023/03/12 21:00:00 by gylim            ###   ########.fr       */
+/*   Created: 2023/03/12 20:55:02 by gylim             #+#    #+#             */
+/*   Updated: 2023/03/12 21:03:39 by gylim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipe_x.h"
+#ifndef PIPE_X
+# define PIPE_X
 
-int main(void)
+typedef struct	s_comm
 {
-	return (0);
-}
+	int		idx;
+	int		commands_cnt;
+	char	**path;
+}				t_comm;
+
+#endif
