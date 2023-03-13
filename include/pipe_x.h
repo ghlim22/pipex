@@ -20,4 +20,6 @@ typedef struct	s_comm
 	char	**path;
 }				t_comm;
 
+void	print_usage_exit(void);
+
 #endif

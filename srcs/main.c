@@ -12,7 +12,11 @@
 
 #include "pipe_x.h"
 
-int main(void)
+int main(int argc, char **argv, char **envp)
 {
+	if (argc != 5)
+		return (0);
+	(void)argv;
+	(void)envp;
 	return (0);
 }

@@ -11,7 +11,12 @@
 /* ************************************************************************** */
 
 #include "pipe_x.h"
+#include "../libft/include/libft.h"
 #include <stdio.h> /* for perror() */
 #include <stdlib.h> /* for exit() */
 
-
+void	print_usage_exit(void)
+{
+	ft_printf(2, "pipex: usage: ./pipex file1 cmd1 cmd2 file2\n");
+	exit(EXIT_FAILURE);
+}
